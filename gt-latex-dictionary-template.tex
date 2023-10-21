@@ -1,0 +1,185 @@
+% The style of this dictionary is heavily inspired by:
+% LaTeX template "Dictionary" by Vel (vel@latextemplates.com)
+% https://www.latextemplates.com/template/dictionary
+% Licence:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% GT LaTeX Dictionary Template
+% Author: Giulio Ticli
+% Version: 1.0 (21 Oct 2023)
+
+\documentclass[10pt, a4paper, twoside]{article}
+
+\usepackage[left=2cm,right=2cm,top=3cm,bottom=2cm,columnsep=20pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{tipa} % Useful for IPA. https://myweb.uiowa.edu/rsmorris/latex/ipa.html
+\usepackage{multicol}
+
+\usepackage{titlesec}
+\titleformat*{\section}{\center\bfseries\huge\sffamily}
+\usepackage{fancyhdr}
+\fancyhead[L]{\textsf{\rightmark}}
+\fancyhead[R]{\textsf{\leftmark}}
+\fancyhead[C]{\textbf{\textsf{\thepage}}}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyfoot{}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\setlength{\columnseprule}{0.4pt}
+
+\newcommand*{\entry}[4][]{\markboth{#2}{#2}\textbf{#2}\textsuperscript{#1}\ \textipa{/#3/}\ \textit{#4}\\}
+\newcommand{\etymology}[1]{\\\textit{Etymology}\ #1}
+\newcommand{\usagenotes}[1]{\\\textit{Usage notes}\ #1}
+
+\usepackage{paralist}
+\newenvironment{severalentries}{\begin{inparaenum}[a.]}{\end{inparaenum}}
+
+\begin{document}
+    \pagestyle{fancy}
+
+    \section*{Bb}
+    \begin{multicols}{2}
+        \entry[1]{ball}{bO:l}{n}
+        \begin{severalentries}
+            \item A hollow or filled sphere.\\
+            \item (\textit{Mathematics})\ In a metric space, the set of points whose distance from a given point is less than a given radius.
+        \end{severalentries}
+        \etymology{From Middle English \textit{bal}, \textit{ball}, \textit{balle}. Ultimately from Proto-Indo-European \textit{*b\textsuperscript{h}el-} (to blow).}
+
+        \entry[2]{ball}{bO:l}{n}
+        An elegant dance.
+
+        \entry{barley}{bA:li}{n}
+        A cereal.
+        \etymology{Sample etymology.}
+        \usagenotes{Sample usage notes.}
+
+        \entry{basic}{"beIsik}{adj}
+        \begin{severalentries}
+            \item Fundamental.\\
+            \item Elementary.\\
+            \item (\textit{Chemistry})\ Having a pH greater than 7.
+        \end{severalentries}
+        \etymology{Sample etymology. The quick brown fox jumps over the lazy dog.}
+        \usagenotes{Sample usage notes.}
+
+        \entry{beach}{bi:\t{tS}}{n}
+        If there is just one definition, you might not want to label it.
+        \etymology{Sample etymology. The quick brown fox jumps over the lazy dog.}
+        \usagenotes{Sample usage notes.}
+
+        \entry{big}{bIg}{adj}
+        My mistress’ eyes are nothing like the sun;
+        coral is far more red than her lips’ red:
+        if snow be white, why then her breasts are dun;
+        if hairs be wires, black wires grow on her head.
+        I have seen roses damask’d, red and white,
+        but no such roses see I in her cheeks;
+        and in some perfumes is there more delight
+        than in the breath that from my mistress reeks.
+        I love to hear her speak, yet well I know
+        that music hath a far more pleasing sound:
+        I grant I never saw a goddess go,
+        my mistress, when she walks, treads on the ground:
+        and yet, by heaven, I think my love as rare
+        as any she belied with false compare.
+        \etymology{Shakespeare's sonnet 130 used as a placeholder.}
+        \usagenotes{Sample usage notes. This time, they're a bit longer than before.}
+
+        \entry{blow}{bl@U}{v}
+        \begin{severalentries}
+            \item A nice definition.\\
+            \item Another definition.
+        \end{severalentries}
+        \etymology{Sample etymology. The quick brown fox jumps over the lazy dog.}
+        \usagenotes{Sample usage notes.}
+
+        \entry{browse}{b\*raUz}{v}
+        Multās per gentēs et multa per aequora vectus
+        adveniō hās miserās, frāter, ad īnferiās,
+        ut tē postrēmō dōnārem mūnere mortis
+        et mūtam nēquīquam alloquerer cinerem
+        quandoquidem fortūna mihī tētē abstulit ipsum
+        heu miser indignē frāter adēmpte mihī
+        nunc tamen intereā haec, prīscō quae mōre parentum
+        trādita sunt trīstī mūnere ad īnferiās,
+        accipe frāternō multum mānantia flētū.
+        Atque in perpetuum, frāter, avē atque valē.
+        \etymology{Catullus' 101th \textit{carmen} used as a placeholder.}
+        \usagenotes{Sample usage notes.}
+
+        \entry{browser}{"b\*raUz@}{n}
+        \begin{severalentries}
+            \item A nice definition.\\
+            \item Another definition.\\
+            \item Yet another definition.\\
+            \item You can add as many as you want\ldots\\
+            \item \ldots unless you run out of letters of the alphabet\ldots\\
+            \item \ldots but that won't happen so easily!\\
+            \item Just beware not to add a newline after the last item.
+            The system already adds one for you.
+        \end{severalentries}
+        \etymology{Sample etymology.}
+        \usagenotes{Sample usage notes.}
+
+        \entry{brunch}{b\*r2n\t{tS}}{n}
+        Lorem ipsum dolor sit amet.
+        Actually, that's a corrupted text by Cicero.
+        \etymology{Sample etymology.}
+        \usagenotes{Sample usage notes.}
+
+        \entry[1]{brush}{b\*r2S}{n}
+        Check the other \textit{brush}\textsuperscript{1}, too!
+        \etymology{Sample etymology.}
+        \usagenotes{Sample usage notes.}
+
+        \entry[1]{brush}{b\*r2S}{v}
+        \begin{severalentries}
+            \item My advice is to retain the same index (1) for two lemmata which are different parts of speech,but share a common etymology (as in this case).\\
+            \item Instead, you should switch to a new index if the two lemmata are not related (as in \textit{ball}\textsuperscript{1} and \textit{ball}\textsuperscript{2}).
+        \end{severalentries}
+        \etymology{Sample etymology. The quick brown fox jumps over the lazy dog.}
+        \usagenotes{Sample usage notes. The quick brown dog jumps over the lazy fox.}
+
+        \entry{bubble}{"b2b@l}{n}
+        \begin{severalentries}
+            \item A nice definition.\\
+            \item Another definition.\\
+            \item Yet another definition, this time a bit longer (it stretches two lines).\\
+            \item You can add as many as you want\ldots\\
+            \item \ldots unless you run out of letters of the alphabet\ldots\\
+            \item \ldots but that won't happen so easily!\\
+            \item Just beware not to add a newline after the last item.
+            The system already adds one for you.
+        \end{severalentries}
+        \usagenotes{Sample usage notes. This time, there's no etymology. Check the header, however!}
+
+        \entry{bucket}{"b2kIt}{n}
+        I wandered lonely as a cloud
+        that floats on high o'er vales and hills,
+        when all at once I saw a crowd,
+        a host of golden daffodils;
+        beside the lake, beneath the trees,
+        fluttering and dancing in the breeze.
+        Continuous as the stars that shine
+        and twinkle on the Milky Way,
+        they stretched in never-ending line
+        along the margin of a bay:
+        ten thousand saw I at a glance,
+        tossing their heads in sprightly dance.
+        The waves beside them danced; but they
+        out-did the sparkling waves in glee:
+        a poet could not but be gay,
+        in such a jocund company:
+        I gazed---and gazed---but little thought
+        what wealth the show to me had brought:
+        for oft, when on my couch I lie
+        in vacant or in pensive mood,
+        they flash upon that inward eye
+        which is the bliss of solitude;
+        and then my heart with pleasure fills,
+        and dances with the daffodils.
+        \etymology{A poem by Wordsworth used as a placeholder.}
+    \end{multicols}
+    \pagebreak
+\end{document}
